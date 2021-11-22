@@ -9,6 +9,7 @@ TAN - #C09F80
     overflow-y: scroll;
 }
 
+
 .App::-webkit-scrollbar {
     display: none;
 } */
@@ -17,6 +18,7 @@ TAN - #C09F80
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+
 
 }
 

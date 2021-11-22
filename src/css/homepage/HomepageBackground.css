@@ -1,30 +1,47 @@
 
 .videoTag {
     position:absolute;
-    width: auto; 
+    width: 100vw; 
     height: 100vh;
     left:0%;
     top:0%;
     object-fit: cover;
-    overflow: hidden;
     z-index:-1;
     filter: grayscale(0%) brightness(30%);
 }
 
+.HomepageBackground {
+    width:100vw;
+
+
+}
+
 .HomepageBackground video{
-    width: auto; 
-    min-width:100vw;
+    width:100vw;
+
     top:0%;
 }
-/* @media (min-aspect-ratio: 16/9) {
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+  
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
     .videoTag {
-        width:100%;
-        height: auto;
+        height: 100vh;
+        width:100vw;
     }
-}
-@media (max-aspect-ratio: 16/9) {
-    .videoTag { 
-        width:auto;
-        height: 100%;
-    }
-} */
+  }

@@ -11,14 +11,13 @@ const MobileMenu = ({ openMobileMenu, setOpenMobileMenu }) => {
     useEffect(() => {
         const mobileMenuClassName = document.querySelector(".MobileMenu");
         if (openMobileMenu) {
-            mobileMenuClassName.classList.add("reveal-mobile-menu");
-            mobileMenuClassName.style.width = "100%";
+            //mobileMenuClassName.classList.add("reveal-mobile-menu");
+            mobileMenuClassName.style.height = "100%";
             document.body.style.overflow = "hidden";
         } else {
-            mobileMenuClassName.classList.remove("reveal-mobile-menu");
-            mobileMenuClassName.style.width = "0%";
+            //mobileMenuClassName.classList.remove("reveal-mobile-menu");
+            mobileMenuClassName.style.height = "0%";
             document.body.style.overflow = "scroll";
-
         };
 
     }, [openMobileMenu]);

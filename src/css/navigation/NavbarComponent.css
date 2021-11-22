@@ -1,5 +1,5 @@
 header {
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%;
     z-index: 10;
@@ -38,18 +38,19 @@ header {
 .Navbar-brand-text {
     display:flex;
     justify-content: center;
-    align-items: center;
     transition: 0.4s;
     font-weight:bold;
     font-size:1.8rem;
     color:rgb(255, 255, 255); 
     text-decoration: none;
+
 }
 
 .brand-text a{
     display:flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items:center;
     align-items: left;
 }
 
@@ -81,9 +82,9 @@ header {
 */
 
 .scrolled{
-    position: sticky;
+    position: fixed;
     height: 100%;
-    max-height: 120px;
+    max-height: 90px;
     background-color:rgb(22, 22, 22);
     font-size:1vmax;
     transition: 0.4s;
@@ -128,13 +129,7 @@ header {
         color:rgb(255, 255, 255); 
         text-decoration: none;
     }
-    .Navbar-navigation {
-        display:flex;
-    }
 
-    .Navbar-NavbarBurger {
-        display:none;
-    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -144,8 +139,9 @@ header {
         font-size:1.8rem;
         color:rgb(255, 255, 255); 
         text-decoration: none;
+        height:100%;
     }
-    
+
     .Navbar-navigation {
         display:flex;
     }
@@ -153,9 +149,20 @@ header {
     .Navbar-NavbarBurger {
         display:none;
     }
+
+    .scrolled {
+        max-height: 70px;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+    .Navbar-brand-text {
+        font-weight:bold;
+        font-size:1.8rem;
+        color:rgb(255, 255, 255); 
+        text-decoration: none;
+    }
+    
 
 }

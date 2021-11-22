@@ -1,5 +1,5 @@
 .NavbarBurger { 
-    display:none;
+    display:inline-block;
     align-items: center;
     width: 48px;
     height: 38px;
@@ -33,9 +33,9 @@
     transform: rotate(45deg) translate(-8px, -8px);
   }
 
-@media screen and (max-width: 767px) {
-
-    .NavbarBurger {
-        display:inline-block;
-    }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .NavbarBurger {
+    display:none;
+  }
 }

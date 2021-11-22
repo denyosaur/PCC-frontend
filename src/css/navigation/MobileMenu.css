@@ -1,43 +1,25 @@
 .MobileMenu {
-    /* display:none;
-    position:absolute;
-    height:100vh;
-    width:100vw;
-    top:0%;
-    bottom:0%;
-    left:0%;
-    background-color: #565656;
-    overflow:hidden; */
     display:flex;
-    height: 100%;
-    width: 0;
+    height: 0;
+    width: 100%;
     position: fixed;
     z-index: 4;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
+
     overflow-x: hidden;
     transition: 0.5s;
 }
 
-.reveal-mobile-menu {
+/* .reveal-mobile-menu {
     display:flex;
     flex-direction:column;
+    height: 100vh;
     overflow: hidden;
-}
+} */
 
 .MobileMenu-list {
-    /* display:flex;
-    flex-direction: column;
-    position:relative;
-    top:100.9px;
-    margin-top:7vh;
-    height:100vh;
-    width:90vw;
-    list-style: none;
-    text-align:right; 
-    padding-left:0px; */
     position: relative;
     top: 25%;
     width: 100%;
@@ -50,9 +32,6 @@
 }
 
 .MobileMenu-item a {
-    /* font-size:3rem;
-    text-decoration: none;
-    color:rgb(175, 175, 175); */
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
@@ -66,6 +45,15 @@
     color:white;
 }
 
+.MobileMenu::-webkit-scrollbar {
+    display: none;
+  }
+
+.stop-scroll {
+    height: 100vh;
+    overflow: hidden;
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 
@@ -73,14 +61,20 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .MobileMenu {
-        display:none;
-    }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
+    .MobileMenu {
+        display:none;
+    }
+    .reveal-mobile-menu {
+        display:flex;
+        flex-direction:column;
+        height: 100vh;
+        overflow: hidden;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
