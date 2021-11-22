@@ -1,17 +1,3 @@
-.HomepageBackground {
-    /* position: absolute;
-    right: 0;
-    bottom: 0;
-    width: auto; 
-    height: 100vh;
-    top:0%;
-    z-index: -1;
-    background-size: cover;
-    overflow: hidden;
-    filter: blur(2px) grayscale(0%) brightness(40%); */
-
-}
-
 
 .videoTag {
     position:absolute;
@@ -22,13 +8,12 @@
     object-fit: cover;
     overflow: hidden;
     z-index:-1;
-    filter: grayscale(0%) brightness(20%);
+    filter: grayscale(0%) brightness(30%);
 }
 
 .HomepageBackground video{
     width: auto; 
     min-width:100vw;
-
     top:0%;
 }
 /* @media (min-aspect-ratio: 16/9) {

@@ -1,10 +1,13 @@
-.NavbarComponent {
+header {
+    position: absolute;
     top: 0;
     width: 100%;
-    height: 100%;
     z-index: 10;
-    transition: 0.4s;
+    transition:0.4s;
     background:transparent;
+    padding:10px 0 10px 0;
+    border-bottom: 1px solid rgb(124, 124, 124);
+    overflow: hidden;
     /* -webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);
     -moz-box-shadow:0 0 10px rgba(0,0,0,0.5); 
     box-shadow:0 0 10px rgba(0,0,0,0.5);
@@ -13,6 +16,7 @@
 
 .navbar-collapse {
     width:100%;
+
 }
 
 .Navbar-logo {
@@ -20,26 +24,42 @@
     height:5vmax;
 }
 
-.Navbar-brand {
+.navbar-brand {
     font-weight:bold;
-    font-size:3vmax;
+    font-size:3rem;
     color:white;
 }
 
+.navbar-brand img {
+    height:auto;
+    width:20%;
+}
+
 .Navbar-brand-text {
+    display:flex;
+    justify-content: center;
+    align-items: center;
     transition: 0.4s;
     font-weight:bold;
-    font-size:2vmax;
+    font-size:1.8rem;
     color:rgb(255, 255, 255); 
     text-decoration: none;
 }
 
+.brand-text a{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: left;
+}
+
 .Navbar-navigation {
+    display:none;
     width:100%;
 }
 
 .Navbar-link-text {
-    font-size:1.5vmax;
+    font-size:1.2rem;
     color:rgb(255, 255, 255); 
     text-decoration: none;
 }
@@ -48,9 +68,41 @@
     color:rgb(173, 173, 173); 
 }
 
+.navbar-brand {
+    display:flex;
+    justify-content: center;
+}
+
+.Navbar-NavbarBurger {
+    display:flex;
+}
+
+/** Navbar CSS for when scrolling down page
+*/
+
 .scrolled{
-    background-color:black;
+    position: sticky;
+    height: 100%;
+    max-height: 120px;
+    background-color:rgb(22, 22, 22);
     font-size:1vmax;
+    transition: 0.4s;
+    padding:0 0 0 0;
+}
+
+.scrolled .navbar .container .navbar-brand .Navbar-brand-text{
+    font-weight:bold;
+    font-size:1.8rem;
+    color:white;
+}
+
+.scrolled .navbar .container .navbar-brand img{
+    height:auto;
+    width:15%;
+}
+
+.scrolled .navbar .container .Navbar-navigation  .navitem .Navbar-link-text{
+    font-size:1rem;
 }
 
 #collapse{
@@ -58,24 +110,52 @@
     z-index: 1;
 }
 
-.container .show .Navbar-navigation{
-    transition: 0.4s;
-    background-color:black;
-} 
-
-@media screen and (max-width: 767px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
     .Navbar-brand-text {
         font-weight:bold;
-        font-size:3vmax;
+        font-size:1.8rem;
         color:rgb(255, 255, 255); 
         text-decoration: none;
     }
+}
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .Navbar-brand-text {
+        font-weight:bold;
+        font-size:1.7rem;
+        color:rgb(255, 255, 255); 
+        text-decoration: none;
+    }
     .Navbar-navigation {
-        display:none;
+        display:flex;
     }
 
     .Navbar-NavbarBurger {
+        display:none;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .Navbar-brand-text {
+        font-weight:bold;
+        font-size:1.8rem;
+        color:rgb(255, 255, 255); 
+        text-decoration: none;
+    }
+    
+    .Navbar-navigation {
         display:flex;
     }
+
+    .Navbar-NavbarBurger {
+        display:none;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
 }

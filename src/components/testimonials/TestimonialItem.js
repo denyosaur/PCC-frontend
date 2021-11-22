@@ -1,33 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { Row, Col } from 'react-bootstrap';
-import Carousel from 'react-bootstrap/Carousel';
+import './../../css/testimonials/TestimonialItem.css';
 
-
-const TestimonialItem = ({ title, testimonial, name, location, image }) => {
+const TestimonialItem = ({ test }) => {
+    const [hovered, setHovered] = useState(false);
+    const { title, testimonial, name, location, image } = test;
 
     return (
-        <div className="TestimonialItem">
-            <Carousel.Item>
-                <Row>
-                    <Col className="TestimonialItem-text">
-                        <Row>
-                            <Col className="TestimonialItem-title">
-                                <h4>{title}</h4>
-                            </Col>
-                            <Col className="TestimonialItem-testimonial">
-                                <p>{testimonial}</p>
-                            </Col>
-                            <Col className="TestimonialItem-name">
-                                <span>{name} from {location}</span>
-                            </Col>
-                        </Row>
-                    </Col>
-                    <Col className="TestimonialItem-image">
-                        <img src={image} alt="lawyer" />
-                    </Col>
-                </Row>
-            </Carousel.Item>
+        <div className="TestimonialItem"
+            onMouseEnter={() => { setHovered(true) }}
+            onMouseLeave={() => { setHovered(false) }}>
+            <div className="TestimonialItem-text">
+                <div className="TestimonialItem-title">
+                    <h4>"{title}"</h4>
+                </div>
+                <div className="TestimonialItem-testimonial">
+                    <p>{testimonial}</p>
+                </div>
+                <div className="TestimonialItem-name">
+                    <span>{name} from {location}</span>
+                </div>
+            </div>
+            <div className={hovered ? "TestimonialItem-background-image TestimonialItem-hovered" : "TestimonialItem-background-image"}>
+                <img src={image} alt="lawyer" className="TestimonialItem-image" />
+            </div>
         </div>)
 };
 

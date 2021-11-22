@@ -1,7 +1,8 @@
 import React from "react";
 
 import HomepageSplash from "./HomepageSplash";
-import Testimonials from "../testimonials/Testimonials";
+
+import './../../css/homepage/Homepage.css';
 
 const Homepage = () => {
 

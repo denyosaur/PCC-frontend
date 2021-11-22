@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import Button from 'react-bootstrap/Button';
 
 import NavbarBurger from './NavbarBurger';
 
@@ -15,10 +14,10 @@ const NavbarComponent = ({ openMobileMenu, setOpenMobileMenu }) => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 20) {
-                document.querySelector(".navbar").classList.add("scrolled");
-            } else {
-                document.querySelector(".navbar").classList.remove("scrolled");
+            if (window.scrollY > 150) {
+                document.querySelector(".NavbarComponent").classList.add("scrolled");
+            } else if (window.scrollY < 1) {
+                document.querySelector(".NavbarComponent").classList.remove("scrolled");
             }
         };
         window.addEventListener("scroll", handleScroll);
@@ -26,12 +25,14 @@ const NavbarComponent = ({ openMobileMenu, setOpenMobileMenu }) => {
 
     return (
         <header className="NavbarComponent">
-            <Navbar expand="md" collapseOnSelect sticky="top" fixed="top" className="fixed-top">
+            <Navbar expand="md" sticky="top" >
                 <Container >
-                    <Navbar.Brand href="/" className="Navbar-brand">
-                        <img src={logo} alt="logo" className="Navbar-logo" />
-                        <span className="Navbar-brand-text">Pacific Coast Counsel</span>
-                    </Navbar.Brand>
+                    <div className="brand-text">
+                        <Navbar.Brand href="/">
+                            <img src={logo} alt="logo" className="Navbar-logo" />
+                            <span className="Navbar-brand-text">Pacific Coast Counsel</span>
+                        </Navbar.Brand>
+                    </div>
                     <Nav className="Navbar-navigation justify-content-end">
                         <Nav.Link href="/about" className="navitem"><span className="Navbar-link-text">About Us</span></Nav.Link>
                         <Nav.Link href="/services" className="navitem"><span className="Navbar-link-text">Services</span></Nav.Link>

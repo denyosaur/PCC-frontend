@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import './../../css/navigation/NavbarBurger.css';
 
@@ -7,6 +7,16 @@ const NavbarBurger = ({ openMobileMenu, setOpenMobileMenu }) => {
         document.querySelector(".NavbarBurger").classList.toggle("change");
         setOpenMobileMenu(!openMobileMenu);
     };
+
+    useEffect(() => {
+        const NavbarBurgerSelector = document.querySelector(".NavbarBurger");
+        if (!openMobileMenu) {
+            NavbarBurgerSelector.classList.remove("change");
+        } else {
+            NavbarBurgerSelector.classList.add("change");
+        };
+
+    }, [openMobileMenu]);
 
     return (
         <div className="NavbarBurger" onClick={changeBurgerOnClickHandler}>
