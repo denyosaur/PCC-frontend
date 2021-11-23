@@ -1,27 +1,32 @@
 .HomepageSplash {
     min-height:500px;
     width:auto;
+
 }
 
 .HomepageSplash-text {
     display:flex;
     flex-direction: column;
+
     align-items: flex-end;
-    margin-top:200px;
+    margin-top:250px;
     color:white;
     font-family: 'Lato', sans-serif;
+    z-index: 2;
 }
 
 .HomepageSplash-header {
     width:100%;
+    z-index: 2;
 }
 
 .HomepageSplash-header h1{
     text-align:right;
-
-    font-size: 4.9rem;
+    font-size: 6vmax;
     font-weight:bold;
     width:100%;
+    text-align: left;
+    z-index: 2;
 }
 
 .HomepageSplash-info {
@@ -29,26 +34,32 @@
     flex-direction: column;
     align-items: flex-end;
     width:100%;
+    z-index: 2;
 }
 
 .HomepageSplash-info h2{
     text-align:right;
-    font-size: 3.4rem;
-
+    font-size: 4.5vmax;
+    text-align: left;
     color:rgb(175, 175, 175);
+    margin-top:3vmax;
+    z-index: 2;
 }
 
 .HomepageSplash-specialty {
     display:flex;
     flex-direction: column;
     align-items: flex-end;
+    z-index: 2;
 }
 
 .HomepageSplash-specialty p{
     text-align:right;
-    font-size: 1.8rem;
-    width:90%;
+    font-size: 2.5vmax;
     color:rgb(175, 175, 175);
+    text-align: left;
+    margin-top:3vmax;
+    z-index: 2;
 }
 
 /* @media screen and (max-width: 600px) {
@@ -110,19 +121,21 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .HomepageSplash-text {
-        margin-top:250px;
+        margin-top:300px;
     }
     .HomepageSplash-header h1{
         font-size: 5.2rem;
+        text-align: right;
     }
     .HomepageSplash-info h2{
         font-size: 3rem;
         width:100%;
+        text-align: right;
     }
     .HomepageSplash-specialty p{
         font-size: 1.8rem;
         width:100%;
-
+        text-align: right;
     }
 }
 

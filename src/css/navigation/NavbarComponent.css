@@ -1,5 +1,5 @@
 header {
-    position: relative;
+    position: absolute;
     top: 0;
     width: 100%;
     z-index: 10;
@@ -16,7 +16,6 @@ header {
 
 .navbar-collapse {
     width:100%;
-
 }
 
 .Navbar-logo {
@@ -24,11 +23,6 @@ header {
     height:5vmax;
 }
 
-.navbar-brand {
-    font-weight:bold;
-    font-size:3rem;
-    color:white;
-}
 
 .navbar-brand img {
     height:auto;
@@ -40,16 +34,20 @@ header {
     justify-content: center;
     transition: 0.4s;
     font-weight:bold;
-    font-size:1.8rem;
+    font-size:2.8vmax;
     color:rgb(255, 255, 255); 
     text-decoration: none;
 
 }
 
+.brand-text {
+    width:60%;
+}
+
 .brand-text a{
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items:center;
     align-items: left;
 }
@@ -72,6 +70,7 @@ header {
 .navbar-brand {
     display:flex;
     justify-content: center;
+
 }
 
 .Navbar-NavbarBurger {
@@ -84,16 +83,15 @@ header {
 .scrolled{
     position: fixed;
     height: 100%;
-    max-height: 90px;
+    max-height: 70px;
     background-color:rgb(22, 22, 22);
-    font-size:1vmax;
     transition: 0.4s;
     padding:0 0 0 0;
 }
 
 .scrolled .navbar .container .navbar-brand .Navbar-brand-text{
     font-weight:bold;
-    font-size:1.8rem;
+    font-size:3vmax;
     color:white;
 }
 
@@ -125,7 +123,7 @@ header {
 @media only screen and (min-width: 768px) {
     .Navbar-brand-text {
         font-weight:bold;
-        font-size:1.7rem;
+        font-size:2.3rem;
         color:rgb(255, 255, 255); 
         text-decoration: none;
     }
@@ -146,6 +144,10 @@ header {
         display:flex;
     }
 
+    .Navbar-link-text{
+        font-size: 3rem;
+    }
+
     .Navbar-NavbarBurger {
         display:none;
     }
@@ -157,12 +159,12 @@ header {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .Navbar-brand-text {
-        font-weight:bold;
-        font-size:1.8rem;
-        color:rgb(255, 255, 255); 
-        text-decoration: none;
+    .navbar {
+        padding:0;
+        height:100%;
     }
-    
 
+    .Navbar-brand-text {
+        font-size:.5rem;
+    }
 }

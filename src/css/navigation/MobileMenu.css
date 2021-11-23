@@ -9,6 +9,7 @@
     background-color: rgb(0,0,0);
 
     overflow-x: hidden;
+    overflow-y: hidden;
     transition: 0.5s;
 }
 
@@ -38,6 +39,8 @@
     color: #818181;
     display: block;
     transition: 0.3s;
+    text-align: right;
+    margin-right:4vmax;
 }
 
 .MobileMenu-item a:hover {
