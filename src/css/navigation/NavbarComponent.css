@@ -26,13 +26,12 @@ header {
 
 .navbar-brand img {
     height:auto;
-    width:20%;
+    width:25%;
 }
 
 .Navbar-brand-text {
     display:flex;
     justify-content: center;
-    transition: 0.4s;
     font-weight:bold;
     font-size:2.8vmax;
     color:rgb(255, 255, 255); 
@@ -91,13 +90,13 @@ header {
 
 .scrolled .navbar .container .navbar-brand .Navbar-brand-text{
     font-weight:bold;
-    font-size:3vmax;
+    font-size:2.5vmax;
     color:white;
 }
 
 .scrolled .navbar .container .navbar-brand img{
     height:auto;
-    width:15%;
+    width:20%;
 }
 
 .scrolled .navbar .container .Navbar-navigation  .navitem .Navbar-link-text{
@@ -127,33 +126,43 @@ header {
         color:rgb(255, 255, 255); 
         text-decoration: none;
     }
-
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .Navbar-brand-text {
-        font-weight:bold;
-        font-size:1.8rem;
-        color:rgb(255, 255, 255); 
-        text-decoration: none;
+    .navbar {
+        padding:0;
         height:100%;
+    }
+
+    .navbar-brand img {
+        width:15%;
+    }
+
+    .Navbar-brand-text {
+        font-size:2.1rem;
+    }
+
+    .Navbar-link-text {
+        display:flex;
+        font-size:1.5rem;
+    }
+
+    .scrolled .navbar .container .navbar-brand .Navbar-brand-text{
+        font-weight:bold;
+        font-size:1.6rem;
+    }
+
+    .scrolled .navbar .container .navbar-brand img{
+        width:13%;
+    }
+
+    .scrolled .navbar .container .Navbar-navigation  .navitem .Navbar-link-text{
+        font-size:1.35rem;
     }
 
     .Navbar-navigation {
         display:flex;
-    }
-
-    .Navbar-link-text{
-        font-size: 3rem;
-    }
-
-    .Navbar-NavbarBurger {
-        display:none;
-    }
-
-    .scrolled {
-        max-height: 70px;
     }
 }
 
@@ -164,7 +173,28 @@ header {
         height:100%;
     }
 
+    .navbar-brand img {
+        width:14%;
+    }
+
     .Navbar-brand-text {
-        font-size:.5rem;
+        font-size:2.5rem;
+    }
+
+    .Navbar-link-text {
+        font-size:1.7rem;
+    }
+
+    .scrolled .navbar .container .navbar-brand .Navbar-brand-text{
+        font-weight:bold;
+        font-size:2rem;
+    }
+
+    .scrolled .navbar .container .navbar-brand img{
+        width:12%;
+    }
+
+    .scrolled .navbar .container .Navbar-navigation  .navitem .Navbar-link-text{
+        font-size:1.45rem;
     }
 }

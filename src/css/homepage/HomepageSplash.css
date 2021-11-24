@@ -102,7 +102,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .HomepageSplash-text {
-        margin-top:250px;
+        margin-top:30vh;
     }
     .HomepageSplash-header h1{
         font-size: 4.9rem;
@@ -121,7 +121,7 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .HomepageSplash-text {
-        margin-top:300px;
+        margin-top:30vh;
     }
     .HomepageSplash-header h1{
         font-size: 5.2rem;
@@ -142,7 +142,7 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .HomepageSplash-text {
-        margin-top:320px;
+        margin-top:28vh;
     }
     .HomepageSplash-header h1{
         font-size: 4.9rem;
@@ -161,10 +161,10 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .HomepageSplash-text {
-        margin-top:320px;
+        margin-top:30vh;
     }
     .HomepageSplash-header h1{
-        font-size: 4.9rem;
+        font-size: 5.5rem;
     }
     .HomepageSplash-info h2{
         font-size: 3rem;
